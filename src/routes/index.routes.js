@@ -52,8 +52,8 @@ router.get("/park", async (req, res) => {
   });
 router.post("/park", async (req, res) => {
   try {
-    const { name, departament, city, ubication, schedule } = req.body;
-    const park = new Park({ name, departament, city, ubication, schedule });
+    const { name, departament, city, ubication,image, schedule } = req.body;
+    const park = new Park({ name, departament, city, ubication,image, schedule });
     await park.save();
     res.status(200).json(park);
   } catch (error) {
@@ -61,6 +61,12 @@ router.post("/park", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
+
+router.get('/park/:texto', async (req, res) => {
+  const { texto } = req.params 
+  let parks = await Park.find({name: new RegExp('^'+texto+'$', "i")})
+  res.json( parks )
+})
 
 //Packages
 

@@ -18,6 +18,10 @@ const parkSchema = new Schema(
       type: String,
       required: true,
     },
+    image: {
+      type: String,
+      required: true,
+    },
     schedule: {
       type: String,
       required: true,
