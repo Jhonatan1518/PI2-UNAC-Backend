@@ -19,7 +19,7 @@ USER node
 
 # our app is running on
 # our app is running on port 3000 within the container, so need to expose it
-EXPOSE 3281
+EXPOSE 3283
 
 # the command that starts our app
 ENTRYPOINT [ "node", "index.js" ]
