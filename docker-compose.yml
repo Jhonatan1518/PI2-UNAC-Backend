@@ -1,8 +1,8 @@
 version: '3.9'
 services:
-  TurisSostenible:  
-    container_name: TurisSostenible-backend
+  turissostenible:  
+    container_name: turissostenible-backend
     build:
       context: ./
     ports:
-      - 3283:3283
+      - 3283:3283s
