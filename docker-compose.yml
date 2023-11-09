@@ -5,4 +5,4 @@ services:
     build:
       context: ./
     ports:
-      - 3283:3283s
+      - 3283:3283
