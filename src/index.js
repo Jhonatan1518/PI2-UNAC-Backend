@@ -1,5 +1,5 @@
-import app from './src/app';
-import './src/database';
+import app from './app';
+import './database';
 
 
 app.listen(3000)
